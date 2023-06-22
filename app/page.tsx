@@ -15,55 +15,55 @@ export default function Home () {
     },
     {
       name: 'Air Horn',
-      bg: 'yellow',
+      bg: 'red',
       file: '/media/airhorn.wav',
       howl: null
     },
     {
       name: 'Sad Piano',
-      bg: 'green',
+      bg: 'red',
       file: '/media/sad-piano.wav',
       howl: null
     },
     {
       name: 'Prank',
-      bg: 'blue',
+      bg: 'red',
       file: '/media/prank.mp3',
       howl: null
     },
     {
       name: 'Fail',
-      bg: 'indigo',
+      bg: 'green',
       file: '/media/fail.mp3',
       howl: null
     },
     {
       name: 'Boxing Bell',
-      bg: 'pink',
+      bg: 'green',
       file: '/media/boxing-bell.mp3',
       howl: null
     },
     {
       name: 'Alarm',
-      bg: 'purple',
+      bg: 'green',
       file: '/media/alarm.mp3',
       howl: null
     },
     {
       name: 'Punches & Slap',
-      bg: 'orange',
+      bg: 'green',
       file: '/media/punches-slap.mp3',
       howl: null
     },
     {
       name: 'Dolphin',
-      bg: 'amber',
+      bg: 'blue',
       file: '/media/dolphin.mp3',
       howl: null
     },
     {
       name: 'Anime Wow',
-      bg: 'lime',
+      bg: 'blue',
       file: '/media/anime-wow.mp3',
       howl: null
     }
@@ -119,12 +119,12 @@ export default function Home () {
 
   return (
     <main className='flex flex-col items-center justify-center p-4'>
-      <div className='text-center'>
+      <div className='text-center pb-10'>
         <h1 className='text-2xl leading-relaxed font-bold'>SoundTap</h1>
         <p className='text-lg'>Your online soundpad.</p>
       </div>
 
-      <div className='py-4 max-w-3xl w-full mx-auto'>
+      <div className='max-w-2xl w-full mx-auto rounded-lg bg-gray-900 p-6 shadow-device'>
         <div className='grid grid-cols-2 md:grid-cols-4 gap-4'>
           {soundButtons.map((soundButton, index) => (
             <ButtonContainer
@@ -132,7 +132,7 @@ export default function Home () {
               soundButton={soundButton}
               onClickCallback={() => handleButtonClick(soundButton)}
               isPlaying={currentSound?.name === soundButton.name}
-              className={`min-h-[7rem] bg-${soundButton.bg}-200`}
+              className={`min-h-[7rem] bg-gray-600 text-gray-300 text-lg`}
             >
               {soundButton.name}
             </ButtonContainer>

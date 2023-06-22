@@ -19,7 +19,6 @@ const ButtonContainer: React.FC<ButtonContainerProps> = ({
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   const handleClick = () => {
-    // onClickCallback();
     if (audioRef.current) {
       if (audioRef.current.paused) {
         audioRef.current.play();

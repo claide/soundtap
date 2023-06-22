@@ -22,7 +22,7 @@ const ButtonWithSound: React.FC<ButtonWithSoundProps> = ({
 
   return (
     <button
-      className={`p-4 rounded-md shadow font-medium ${className}`}
+      className={`p-4 rounded-lg shadow-button font-medium ${className}`}
       onClick={handleClick}
     >
       {children}
